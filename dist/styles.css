@@ -6,13 +6,13 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
+    font-family: monospace;
     
 }
 
 .diagonal-split-background{
    
-    background-image: -webkit-linear-gradient(-40deg, 	#FFFFFF 50%, #F5F5F5 50.3%);
+    background-image: -webkit-linear-gradient(-40deg, 	#FFFFFF 50%, /*#F5F5F5*/ #FBF9F6 50.3%);
   }
 
 
@@ -21,6 +21,26 @@ ul{
     margin: 0;
     padding: 0;
 }
+
+a:link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+  
+  a:active {
+    text-decoration: underline;
+    color: black;
+  }
 
 #content {
     display: flex;
@@ -32,6 +52,8 @@ ul{
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
+    font-size: 5em;
+  
 }
 
 #divider {
@@ -57,11 +79,15 @@ ul{
     display: flex;
     flex-direction: row;
     border: none;
-    gap: 3em;
+    gap: 4em;
 }
 
 #navTab {
   display: flex;
   list-style: none;
    
+}
+
+#aRef {
+    font-size: 1.5em;
 }
