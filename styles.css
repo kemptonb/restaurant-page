@@ -15,8 +15,6 @@ html, body {
     background-image: -webkit-linear-gradient(-40deg, 	#FFFFFF 50%, /*#F5F5F5*/ #FBF9F6 50.3%);
   }
 
-
-
 ul{
     margin: 0;
     padding: 0;
@@ -44,8 +42,8 @@ a:link {
 
 #content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
 }
 
 #head {
@@ -53,6 +51,7 @@ a:link {
     flex-direction: column;
     margin-bottom: 0;
     font-size: 5em;
+    align-items: center;
   
 }
 
@@ -90,4 +89,22 @@ a:link {
 
 #aRef {
     font-size: 1.5em;
+}
+
+#subHead {
+    display: flex;
+    justify-content: center;
+}
+
+#divCont {
+    flex-direction: column;
+    padding: 1em 5em 2em 5em;
+}
+
+p {
+    font-size: 0.65em;
+}
+
+#menuSubHead{
+    text-decoration: underline;
 }
