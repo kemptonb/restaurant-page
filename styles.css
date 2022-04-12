@@ -46,6 +46,12 @@ a:link {
     flex-direction: column;
 }
 
+#subcontent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #head {
     display: flex;
     flex-direction: column;
