@@ -5,35 +5,15 @@ import reserve from "./reserve";
 
 
 
-(async () => {
+ const renderPage = async () => {
     let pageLoad = () => {
-
         //content container
-        const content = document.querySelector('#content');
-    
-    
-        const changePage = {
-            homePage: () => { homePage();},
-    
-            aboutPage: () => { about();},
-    
-            menuPage: () => { menu(); },
-    
-            reservePage: () => { reserve();},
-
-            test: () => {alert("hi");}
-    
-        };
-    
-        
-      //return {homePage, about, menu, reserve};
-    
+        let content = document.querySelector('#content');
+       
+        homePage();
     }
     await import('./homePage.js').then(pageLoad());
-        let pageDisplay = homePage();
-        return pageDisplay;
-  })();  
+  }  
+  export default renderPage();
 
 
-
-  

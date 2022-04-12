@@ -1,16 +1,26 @@
+import homePage from './homePage.js';
+import about from './about.js';
+import menu from './menu.js';
+
 const reserve = () =>{
     console.log("mod3")
     
-    //About Page Module
-
+    //Reserve Page Module
+    let subcontent = document.createElement("div");
+    subcontent.setAttribute("id", "subcontent");
+    content.appendChild(subcontent);
     //change justify content of body, so title shows at top of page
     document.body.style.justifyContent = "normal";
     
     //header and divider
     const head = document.createElement("h1");
     head.textContent = "A V A N T - G R U B";
+    head.addEventListener("click", event =>{
+        subcontent.remove();
+        homePage();
+    });
     head.setAttribute("id", "head");
-    content.appendChild(head);
+    subcontent.appendChild(head);
     
     const divider = document.createElement("HR");
     divider.setAttribute("id", "divider");
@@ -19,7 +29,7 @@ const reserve = () =>{
     //navBarWrap
     const navBarWrap = document.createElement("ul");
     navBarWrap.setAttribute("id", "navBarWrap");
-    content.appendChild(navBarWrap);
+    subcontent.appendChild(navBarWrap);
     
     //navBar
     const navBar = document.createElement("ul");
@@ -33,7 +43,10 @@ const reserve = () =>{
     navBar.appendChild(navTab1);
     
     const aRef1 = document.createElement("a");
-    aRef1.href = "http://www.cnn.com/";
+    aRef1.addEventListener("click", event =>{
+        subcontent.remove();
+        about();
+    });
     aRef1.textContent = "about";
     aRef1.setAttribute("id", "aRef");
     navTab1.appendChild(aRef1);
@@ -45,7 +58,10 @@ const reserve = () =>{
     navBar.appendChild(navTab2);
     
     const aRef2 = document.createElement("a");
-    aRef2.href = "http://www.google.com/";
+    aRef2.addEventListener("click", event =>{
+        subcontent.remove();
+        menu();
+    });
     aRef2.textContent = "menu";
     aRef2.setAttribute("id", "aRef");
     navTab2.appendChild(aRef2);
@@ -57,7 +73,10 @@ const reserve = () =>{
     
     
     const aRef3 = document.createElement("a");
-    aRef3.href = "http://www.bing.com/";
+    aRef3.addEventListener("click", event =>{
+        subcontent.remove();
+        reserve();
+    });
     aRef3.textContent = "reserve";
     aRef3.setAttribute("id", "aRef");
     navTab3.appendChild(aRef3);
@@ -65,7 +84,7 @@ const reserve = () =>{
     //content
     const div1 = document.createElement("h1");
     div1.setAttribute("id", "divCont");
-    content.appendChild(div1);
+    subcontent.appendChild(div1);
 
     
     const head2 = document.createElement("h3");
